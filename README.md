@@ -1,3 +1,3 @@
 <div align=center>Translate Deutsch-Englisch-Französisch</div>
-Übersetzen mit Helsinnki-Modelle Hugging
+<div align=center>Übersetzen mit Helsinki-Modelle von Huggingface</div>
  
