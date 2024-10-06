@@ -8,9 +8,13 @@
 
 ```sh
 pip install gradio
+pip install torch
+pip install transformers
 ```
 or
 ```sh
 pip install --upgrade gradio
+pip install --upgrade torch
+pip install --upgrade transformers
 ```
 
