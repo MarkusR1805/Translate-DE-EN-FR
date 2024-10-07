@@ -68,3 +68,4 @@ Python sollte installiert sein!
 python main.py
 ```
 ## Ein Video zur Installation auf dem Mac folgt und der Link wird demnächst hier verlinkt!
+[![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fe2e69ea-4ba8-4aac-9d1a-002b372b7e5a/original=true,quality=90/28751964.jpeg)](https://civitai.com/user/Der_Zerfleischer)
