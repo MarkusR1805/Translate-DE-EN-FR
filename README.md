@@ -19,25 +19,6 @@ Verwendet werden die Open-Source-Modelle von Helsinki-NLP die man auch lokal ins
 - Durch lokale Installation der Modelle unabhängig vom Anbieter der Modelle (Hugging Face), ideal wenn man sehr oft dieses Programm anwendet (Speicherplatz ca. 4GB)
 - Für PC/MAC ab 8GB Arbeitsspeicher
 
-# Einfache Umstellung auf lokale Installation
-Diesen Quellcode:
-
-> Laden der Modelle deutsch / englisch und umgekehrt
-> de_to_en = pipeline("translation", model="Helsinki-NLP/opus-mt-de-en", device=device)
-> en_to_de = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de", device=device)
-> Laden der Modelle französisch / deutsch und umgekehrt
-> de_to_fr = pipeline("translation", model="Helsinki-NLP/opus-mt-de-fr", device=device)
-> fr_to_de = pipeline("translation", model="Helsinki-NLP/opus-mt-fr-de", device=device)
-
-in diesen umändern (den Pfad anpassen)
-
-> Laden der Modelle deutsch / englisch und umgekehrt
-> de_to_en = pipeline("translation", model="Helsinki-NLP-opus-mt-de-en", device=device)
-> en_to_de = pipeline("translation", model="Helsinki-NLP-opus-mt-en-de", device=device)
-> Laden der Modelle französisch / deutsch und umgekehrt
-> de_to_fr = pipeline("translation", model="Helsinki-NLP-opus-mt-de-fr", device=device)
-> fr_to_de = pipeline("translation", model="Helsinki-NLP-opus-mt-fr-de", device=device)
-
 ## 100%ige Garantie der korrekten Übersetzen
 
 Wie mit allen KI-Modellen kann man keine 100%ige Garantie geben ob der Text korrekt übersetzt wird, auch ich übernehme keine Haftung
