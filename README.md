@@ -67,3 +67,4 @@ Python sollte installiert sein!
 ```sh
 python main.py
 ```
+## Ein Video zur Installation auf dem Mac folgt und der Link wird demnächst hier verlinkt!
