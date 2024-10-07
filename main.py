@@ -4,7 +4,7 @@ from transformers import pipeline
 import webbrowser
 import threading
 
-device = torch.device('mps')
+device = torch.device('cpu')
 
 #device = get_device()
 print(f"Verwendetes Gerät: {device}")
