@@ -33,7 +33,7 @@ def translate_fr_to_de(text):
 
 # Gradio Interface
 with gr.Blocks() as demo:
-    gr.Markdown("# Deutsch-Englisch und Deutsch-Französisch Übersetzer")
+    gr.Markdown("# Deutsch-Englisch und Deutsch-Französisch Übersetzer und umgekehrt ;-)")
     
     with gr.Row():
         with gr.Column():
