@@ -9,11 +9,12 @@ Verwendet werden die Open-Source-Modelle von Helsinki-NLP die man auch lokal ins
 ## Für wen geeignet
 
 - Ideal für Schüler
-
--- Zum lernen und zum überprüfen von gelerntem
--- Um Texte aus dem Internet schnell und einfach zu übersetzen (je nach Kontext, eine 100%ige Garantie kann ich nicht zusichern)
+- Zum lernen und zum überprüfen von gelerntem
+- Um Texte aus dem Internet schnell und einfach zu übersetzen (je nach Kontext, eine 100%ige Garantie kann ich nicht zusichern)
 - Für Anwender wie mich die sich auf vielen Inhalten in Englisch rumschlagen müssen ;-)
+
 ***
+
 ## Warum dieses Programm
 
 - Keine teuren Abo's von irgendwelchen Clouddiensten, Chatbots usw.

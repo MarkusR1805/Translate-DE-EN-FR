@@ -44,24 +44,24 @@ with gr.Blocks() as demo:
     
     with gr.Row():
         with gr.Column():
-            german_input = gr.Textbox(label="Deutscher Text", lines=5)
-            en_output = gr.Textbox(label="Englische Übersetzung", lines=5)
+            german_input = gr.Textbox(label="Deutscher Text", lines=8)
+            en_output = gr.Textbox(label="Englische Übersetzung", lines=8)
             de_to_en_btn = gr.Button("Deutsch -> Englisch")
         
         with gr.Column():
-            english_input = gr.Textbox(label="Englischer Text", lines=5)
-            de_output = gr.Textbox(label="Deutsche Übersetzung", lines=5)
+            english_input = gr.Textbox(label="Englischer Text", lines=8)
+            de_output = gr.Textbox(label="Deutsche Übersetzung", lines=8)
             en_to_de_btn = gr.Button("Englisch -> Deutsch")
         # Fränzösisch / Deutsch  und umgekehrt
     with gr.Row():
         with gr.Column():
-            germanfr_input = gr.Textbox(label="Deutscher Text", lines=5)
-            fr_output = gr.Textbox(label="Französische Übersetzung", lines=5)
+            germanfr_input = gr.Textbox(label="Deutscher Text", lines=8)
+            fr_output = gr.Textbox(label="Französische Übersetzung", lines=8)
             de_to_fr_btn = gr.Button("Deutsch -> Französisch")
         
         with gr.Column():
-            frgerman_input = gr.Textbox(label="Französischer Text", lines=5)
-            defr_output = gr.Textbox(label="Deutsche Übersetzung", lines=5)
+            frgerman_input = gr.Textbox(label="Französischer Text", lines=8)
+            defr_output = gr.Textbox(label="Deutsche Übersetzung", lines=8)
             fr_to_de_btn = gr.Button("Französisch -> Deutsch")
     
     de_to_en_btn.click(translate_de_to_en, inputs=german_input, outputs=en_output)
