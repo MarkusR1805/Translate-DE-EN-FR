@@ -22,7 +22,7 @@ Verwendet werden die Open-Source-Modelle von Helsinki-NLP die man auch lokal ins
 - Durch lokale Installation der Modelle unabhängig vom Anbieter der Modelle (Hugging Face), ideal wenn man sehr oft dieses Programm anwendet (Speicherplatz ca. 4GB)
 - Für PC/MAC ab 8GB Arbeitsspeicher
 
-## 100%ige Garantie der korrekten Übersetzen
+## 100%ige Garantie der korrekten Übersetzungen
 
 Wie mit allen KI-Modellen kann man keine 100%ige Garantie geben ob der Text korrekt übersetzt wird, auch ich übernehme keine Haftung
 
