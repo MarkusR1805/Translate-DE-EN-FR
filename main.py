@@ -14,7 +14,6 @@ elif torch.backends.mps.is_available():
 else:
     device = torch.device('cpu')
 
-#device = get_device()
 print(f"Verwendetes Gerät: {device}")
 
 # Laden der Modelle deutsch / englisch und umgekehrt
