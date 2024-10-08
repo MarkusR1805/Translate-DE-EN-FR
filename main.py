@@ -4,7 +4,15 @@ from transformers import pipeline
 import webbrowser
 import threading
 
-device = torch.device('cpu')
+# Prüfen, ob CUDA verfügbar ist
+if torch.cuda.is_available():
+    device = torch.device('cuda')
+# Prüfen, ob MPS (Apple Silicon) verfügbar ist
+elif torch.backends.mps.is_available():
+    device = torch.device('mps')
+# Wenn keines der beiden verfügbar ist, auf CPU zurückgreifen
+else:
+    device = torch.device('cpu')
 
 #device = get_device()
 print(f"Verwendetes Gerät: {device}")
