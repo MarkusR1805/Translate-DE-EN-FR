@@ -3,7 +3,7 @@ import torch
 from transformers import pipeline
 import webbrowser
 import threading
-
+ 
 # Prüfen, ob CUDA verfügbar ist
 if torch.cuda.is_available():
     device = torch.device('cuda')
