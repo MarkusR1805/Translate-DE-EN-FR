@@ -26,6 +26,9 @@ Verwendet werden die Open-Source-Modelle von Helsinki-NLP die man auch lokal ins
 
 Wie mit allen KI-Modellen kann man keine 100%ige Garantie geben ob der Text korrekt übersetzt wird, auch ich übernehme keine Haftung
 
+***
+
+## Benötigte Python-Bibliotheken
 ```sh
 pip install gradio
 pip install transformers
@@ -36,6 +39,16 @@ oder
 pip install --upgrade gradio
 pip install --upgrade transformers
 pip install --upgrade torch
+```
+
+## Aktualisieren per Terminal
+```sh
+git pull
+```
+## Wenn eine Fehlermeldung kommt mit "STASH"
+```sh
+git stash
+git pull
 ```
 
 ## Python 3.10, 3.11 oder 3.12
@@ -51,6 +64,9 @@ Python sollte installiert sein!
 ```sh
 python main.py
 ```
+
+***
+
 ## Ein Video zur Installation auf dem Mac und eine Erklärung zum Programm hier:
 [YouTube-Video](https://youtu.be/UEBUr_pZwWw)
 
