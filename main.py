@@ -4,7 +4,7 @@ from transformers import pipeline
 import webbrowser
 import threading
  
-# Prüfen, ob CUDA verfügbar ist
+# Prüfen, welches System verfügbar ist, ob CUDA, MPS oder CPU
 if torch.cuda.is_available():
     device = torch.device('cuda')
 # Prüfen, ob MPS (Apple Silicon) verfügbar ist
