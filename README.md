@@ -36,9 +36,9 @@ pip install torch
 ```
 oder
 ```sh
-pip install --upgrade gradio
-pip install --upgrade transformers
-pip install --upgrade torch
+pip install --upgrade gradio==4.38.1
+pip install --upgrade transformers==4.45.1
+pip install --upgrade torch==2.4.1
 ```
 
 ## Aktualisieren per Terminal
@@ -51,7 +51,7 @@ git stash
 git pull
 ```
 
-## Python 3.10, 3.11 oder 3.12
+## Python 3.11 oder 3.12
 Python sollte installiert sein!
 
 ## Installation von Python
