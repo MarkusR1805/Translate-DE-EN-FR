@@ -40,6 +40,11 @@ pip install --upgrade gradio==4.38.1
 pip install --upgrade transformers==4.45.1
 pip install --upgrade torch==2.4.1
 ```
+## Installieren der requirements.txt Datei
+Mit dieser Datei kann man alle benötigten Bibliotheken installieren
+```sh
+pip install -r requirements.txt
+```
 
 ## Aktualisieren per Terminal
 ```sh
