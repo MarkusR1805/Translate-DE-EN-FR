@@ -4,7 +4,7 @@
 [![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9c0923a3-46bb-4a4d-be73-66e72d7a4c4c/original=true,quality=90/11945886.jpeg)](https://civitai.com/user/Der_Zerfleischer)
 ***
 Übersetzen von Deutsch auf Englisch und Französisch aber auch umgekehrt
-Verwendet werden die Open-Source-Modelle von Helsinki-NLP die man auch lokal installieren kann und somit unabhängig von einer Onlineverbindung ist.
+Verwendet werden die Open-Source-Modelle von der University Helsinki die man auch lokal installieren kann und somit unabhängig von einer Onlineverbindung ist (und auch schneller). Zu beachten ist das jedes Modell in ein eigenes Verzeichnis kopiert werden muss. Der Quellcode zu den Pfaden muss dann entsprechend angepasst werden.
 
 ## Für wen geeignet
 
