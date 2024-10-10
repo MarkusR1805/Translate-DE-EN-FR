@@ -2,5 +2,10 @@
 /Helsinki-NLP-opus-mt-en-de
 /Helsinki-NLP-opus-mt-fr-de
 /Helsinki-NLP-opus-mt-de-fr
+/bin
+/include
+/lib
+/share
+pyvenv.cfg
 translate.py
-de-china.py
+.DS_Store
