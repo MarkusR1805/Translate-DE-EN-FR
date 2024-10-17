@@ -40,8 +40,8 @@ git pull
 ```
 
 ## Python 3.11 oder 3.12
-Python sollte installiert sein!
-Am besten im Verzeichnis des Programms eine eigene Python-Umgebung erstellen
+### Python sollte installiert sein!
+### Am besten im Verzeichnis des Programms eine eigene Python-Umgebung erstellen
 
 ## Installation von Python
 
