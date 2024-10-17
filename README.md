@@ -28,18 +28,6 @@ Wie mit allen KI-Modellen kann man keine 100%ige Garantie geben ob der Text korr
 
 ***
 
-## Benötigte Python-Bibliotheken
-```sh
-pip install gradio
-pip install transformers
-pip install torch
-```
-oder
-```sh
-pip install --upgrade gradio==4.38.1
-pip install --upgrade transformers==4.45.1
-pip install --upgrade torch==2.4.1
-```
 ## Installieren der requirements.txt Datei
 Mit dieser Datei kann man alle benötigten Bibliotheken installieren
 ```sh
@@ -50,14 +38,10 @@ pip install -r requirements.txt
 ```sh
 git pull
 ```
-## Wenn eine Fehlermeldung kommt mit "STASH"
-```sh
-git stash
-git pull
-```
 
 ## Python 3.11 oder 3.12
 Python sollte installiert sein!
+Am besten im Verzeichnis des Programms eine eigene Python-Umgebung erstellen
 
 ## Installation von Python
 
