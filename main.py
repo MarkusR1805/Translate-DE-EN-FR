@@ -4,16 +4,8 @@ from transformers import pipeline
 import webbrowser
 import threading
 
-# Prüfen, welches System verfügbar ist, ob CUDA, MPS oder CPU
-if torch.cuda.is_available():
-    device = torch.device('cuda')
-# Prüfen, ob MPS (Apple Silicon) verfügbar ist
-elif torch.backends.mps.is_available():
-    device = torch.device('mps')
-# Wenn keines der beiden verfügbar ist, auf CPU zurückgreifen
-else:
-    device = torch.device('cpu')
-
+# Die Modelle laufen schneller auf CPU (zumindest auf dem Mac)
+device = torch.device('cpu')
 print(f"Verwendetes Gerät: {device}")
 
 # Laden der Modelle deutsch / englisch und umgekehrt

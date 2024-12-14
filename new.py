@@ -5,38 +5,33 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt, QTimer
 import torch
 from transformers import pipeline
-from PyQt6.QtGui import QClipboard
+from PyQt6.QtGui import QClipboard, QFont
 
-
-# Prüfen, welches System verfügbar ist, ob CUDA, MPS oder CPU
-if torch.cuda.is_available():
-    device = torch.device('cuda')
-# Prüfen, ob MPS (Apple Silicon) verfügbar ist
-elif torch.backends.mps.is_available():
-    device = torch.device('mps')
-# Wenn keines der beiden verfügbar ist, auf CPU zurückgreifen
-else:
-    device = torch.device('cpu')
-
+# Die Modelle laufen schneller auf CPU (zumindest auf dem Mac)
+device = torch.device('cpu')
 print(f"Verwendetes Gerät: {device}")
 
 # Laden der Modelle deutsch / englisch und umgekehrt
-de_to_en = pipeline("translation", model="Helsinki-NLP/opus-mt-de-en", device=device)
-en_to_de = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de", device=device)
+de_to_en = pipeline("translation", model="Helsinki-NLP-opus-mt-de-en", device=device)
+en_to_de = pipeline("translation", model="Helsinki-NLP-opus-mt-en-de", device=device)
 
 # Laden der Modelle französisch / deutsch und umgekehrt
-de_to_fr = pipeline("translation", model="Helsinki-NLP/opus-mt-de-fr", device=device)
-fr_to_de = pipeline("translation", model="Helsinki-NLP/opus-mt-fr-de", device=device)
+de_to_fr = pipeline("translation", model="Helsinki-NLP-opus-mt-de-fr", device=device)
+fr_to_de = pipeline("translation", model="Helsinki-NLP-opus-mt-fr-de", device=device)
 
 
 class Uebersetzer(QWidget):
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
+        # Schriftart und -größe festlegen
+        font = QFont()
+        font.setPointSize(16)
+        self.setFont(font)
+
     def initUI(self):
-        self.setGeometry(100, 100, 1500, 800)  # Angepasste Größe für mehr Platz
+        self.setGeometry(100, 100, 1200, 800)  # Angepasste Größe für mehr Platz
         self.setWindowTitle('Deutsch-Englisch und Deutsch-Französisch Übersetzer und umgekehrt')
 
         main_layout = QVBoxLayout()
@@ -93,14 +88,16 @@ class Uebersetzer(QWidget):
         # Eingabefeld
         input_text = QTextEdit()
         input_text.setPlaceholderText(input_placeholder)
-        input_text.setFixedHeight(150)
+        input_text.setMinimumHeight(100)
+        input_text.setMinimumWidth(300)
         layout.addWidget(input_text)
 
         # Ausgabefeld
         output_text = QTextEdit()
         output_text.setPlaceholderText(output_placeholder)
         output_text.setReadOnly(True)
-        output_text.setFixedHeight(150)
+        output_text.setMinimumHeight(100)
+        output_text.setMinimumWidth(300)
         layout.addWidget(output_text)
 
         # Buttons (Übersetzen und Kopieren) in vertikalem Layout
@@ -108,6 +105,7 @@ class Uebersetzer(QWidget):
 
         translate_btn = QPushButton(translate_label)
         translate_btn.setFixedWidth(150)
+        # Hover-Effekt direkt im Stylesheet definieren
         translate_btn.setStyleSheet("QPushButton { background-color: white; color: black; } QPushButton:hover { background-color: lightgreen; }")
         translate_btn.clicked.connect(lambda: self.translate_and_flash(translate_btn, translate_func, input_text, output_text))
         button_layout.addWidget(translate_btn)
@@ -119,7 +117,7 @@ class Uebersetzer(QWidget):
         button_layout.addWidget(copy_btn)
 
         # Platzhalter hinzufügen, um die Buttons oben zu halten
-        button_layout.addStretch()
+        # button_layout.addStretch()
 
         layout.addLayout(button_layout)
 
