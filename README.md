@@ -1,7 +1,7 @@
 # Translate Deutsch-Englisch-Französisch
 ## Modelle von Helsinki-NLP von Hugging Faces
 ***
-[![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9c0923a3-46bb-4a4d-be73-66e72d7a4c4c/original=true,quality=90/11945886.jpeg)](https://civitai.com/user/Der_Zerfleischer)
+[![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7edf27fc-ab38-4830-b7cc-e5af8c168a13/original=true,quality=90/49564758.jpeg)](https://civitai.com/user/Der_Zerfleischer)
 ***
 Übersetzen von Deutsch auf Englisch und Französisch aber auch umgekehrt
 Verwendet werden die Open-Source-Modelle von der University Helsinki die man auch lokal installieren kann und somit unabhängig von einer Onlineverbindung ist (und auch schneller). Zu beachten ist das jedes Modell in ein eigenes Verzeichnis kopiert werden muss. Der Quellcode zu den Pfaden muss dann entsprechend angepasst werden.
@@ -59,4 +59,4 @@ python main.py
 ## Ein Video zur Installation auf dem Mac und eine Erklärung zum Programm hier:
 [YouTube-Video](https://youtu.be/UEBUr_pZwWw)
 
-[![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/fe2e69ea-4ba8-4aac-9d1a-002b372b7e5a/original=true,quality=90/28751964.jpeg)](https://civitai.com/user/Der_Zerfleischer)
+[![N|Solid](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/43f67289-2bf5-4622-b41e-c3f142f12f35/original=true,quality=90/49324271.jpeg)](https://civitai.com/user/Der_Zerfleischer)
