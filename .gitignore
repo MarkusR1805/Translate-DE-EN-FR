@@ -6,6 +6,11 @@
 /include
 /lib
 /share
+.gitignore
 pyvenv.cfg
+main2.py
+main3.py
 translate.py
 .DS_Store
+translate.spec
+utils.py
