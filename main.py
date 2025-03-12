@@ -1,10 +1,12 @@
 import sys
-from PyQt6.QtWidgets import (
+from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton, QLabel
 )
-from PyQt6.QtCore import Qt, QTimer
-from PyQt6.QtGui import QClipboard, QFont
+from PySide6.QtCore import Qt, QTimer
+from PySide6.QtGui import QClipboard, QFont
 from functools import partial
+import torch
+from transformers import pipeline
 
 # Hauptcode
 from utils import load_translation_models
