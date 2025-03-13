@@ -1,4 +1,5 @@
 import sys
+import os
 from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton, QLabel
 )
@@ -11,7 +12,24 @@ from transformers import pipeline
 # Hauptcode
 from utils import load_translation_models
 
-translation_models = load_translation_models()
+# Setzen des TRANSFORMERS_OFFLINE-Flags
+os.environ['TRANSFORMERS_OFFLINE'] = '1'
+print("TRANSFORMERS_OFFLINE aktiviert.")
+
+# Setzen des Arbeitsverzeichnisses auf das Verzeichnis von main.py
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("Aktuelles Arbeitsverzeichnis:", os.getcwd())
+
+# Definieren Sie die lokalen Pfade relativ zum aktuellen Arbeitsverzeichnis
+local_model_paths = {
+    'de_to_en': './Helsinki-NLP-opus-mt-de-en',
+    'en_to_de': './Helsinki-NLP-opus-mt-en-de',
+    'de_to_fr': './Helsinki-NLP-opus-mt-de-fr',
+    'fr_to_de': './Helsinki-NLP-opus-mt-fr-de'
+}
+
+# Laden der Modelle
+translation_models = load_translation_models(local_model_paths)
 de_to_en = translation_models['de_to_en']
 en_to_de = translation_models['en_to_de']
 de_to_fr = translation_models['de_to_fr']
@@ -113,7 +131,6 @@ class Uebersetzer(QWidget):
 
         translate_btn = QPushButton(translate_label)
         translate_btn.setFixedWidth(150)
-        # Hier setzen wir das komplette StyleSheet mit Hover-Regel
         translate_btn.setStyleSheet(TRANSLATE_BTN_STYLE)
         translate_btn.clicked.connect(
             partial(self.translate_and_flash, translate_btn, translate_func, input_text, None))
@@ -132,7 +149,6 @@ class Uebersetzer(QWidget):
 
         copy_btn = QPushButton("Kopieren")
         copy_btn.setFixedWidth(150)
-        # Hier setzen wir das komplette StyleSheet mit Hover-Regel für den Kopier-Button
         copy_btn.setStyleSheet(COPY_BTN_STYLE)
         copy_btn.clicked.connect(partial(copy_func, output_text))
         output_layout.addWidget(copy_btn)
@@ -163,7 +179,6 @@ class Uebersetzer(QWidget):
 
         # Temporär Rot setzen
         button.setStyleSheet("QPushButton { background-color: red; color: white; }")
-        # Nach 100 ms wieder das Original-Style (inkl. Hover-Effekt) zurücksetzen
         QTimer.singleShot(100, lambda btn=button: btn.setStyleSheet(TRANSLATE_BTN_STYLE))
 
         translate_function(input_text, output_text)
