@@ -4,7 +4,7 @@ from transformers import pipeline
 
 def load_translation_models(local_model_paths):
     # Prüfen, ob eine GPU verfügbar ist, ansonsten CPU verwenden
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'mps')
     print(f"Verwendetes Gerät: {device}")
 
     # Laden der Modelle aus lokalen Pfaden
