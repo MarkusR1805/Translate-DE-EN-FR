@@ -1,11 +1,2 @@
-/bin
-/Helsinki-NLP-opus-mt-de-en
-/Helsinki-NLP-opus-mt-de-fr
-/Helsinki-NLP-opus-mt-en-de
-/Helsinki-NLP-opus-mt-fr-de
-/include
-/lib
-/.gitignore
-pyvenv.cfg
-uninstall.txt
-translate.spec
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
