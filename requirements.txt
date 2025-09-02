@@ -26,7 +26,7 @@ setuptools==80.9.0
 shiboken6==6.9.1
 sympy==1.14.0
 tokenizers==0.21.2
-torch==2.7.1
+torch==2.8.0
 tqdm==4.67.1
 transformers==4.53.2
 typing_extensions==4.14.1
